@@ -42,7 +42,7 @@ func DigShort(domain string, t int) string {
 	return result
 }
 
-// 注意: 与标准结果不同,没有引号
+// 注意: 与标准结果不同,没有引号. Android查询没有结果!
 // http://networkbit.ch/golang-dns-lookup/#lookuptxt
 func LookupTXT(domain string) string {
 	as, err := net.LookupTXT(domain)
