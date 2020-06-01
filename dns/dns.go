@@ -19,7 +19,7 @@ func DigShort(domain string, t int) string {
 	m := new(dns.Msg)
 	m.SetQuestion(dns.Fqdn(domain), uint16(t))
 	m.RecursionDesired = true
-	r, _, err := c.Exchange(m, net.JoinHostPort("8.8.8.8", "53"))
+	r, _, err := c.Exchange(m, net.JoinHostPort("119.29.29.29", "53"))
 	if r == nil {
 		log.Println("查询DNS记录失败:", err)
 		return "[]"
